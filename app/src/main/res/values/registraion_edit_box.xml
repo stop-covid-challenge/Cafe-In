@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Registration_Edit_Box">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:inputType">text|textNoSuggestions</item>
+        <item name="android:background">@drawable/registration_background</item>
+    </style>
+
+    <style name="Registration_Edit_Box_Single" parent="Registration_Edit_Box">
+        <item name="android:inputType">text|textNoSuggestions</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="Registration_Edit_Box_Multi" parent="Registration_Edit_Box">
+        <item name="android:inputType">textImeMultiLine|textNoSuggestions</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+</resources>
