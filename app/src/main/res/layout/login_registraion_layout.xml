@@ -22,6 +22,46 @@
         android:hint="ex) 제 프로필에 오신걸 환영합니다"
         style="@style/Registration_Edit_Box_Single"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:text="메인 프로필 등록"
+                android:layout_marginTop="0dp"
+                style="@style/Registration_Text_Login"/>
+
+            <ImageButton
+                style="@style/Picture_Background_Login" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="32dp">
+
+            <TextView
+                android:text="배경 사진 등록"
+                android:layout_marginTop="0dp"
+                style="@style/Registration_Text_Login"/>
+
+            <ImageButton
+                style="@style/Picture_Background_Login" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
     <TextView
         android:text="주 활동 회원 분류"
         android:layout_marginTop="20dp"
