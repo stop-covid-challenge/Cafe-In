@@ -5,26 +5,8 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="메뉴 이름"
-        android:layout_marginTop="32dp"
-        style="@style/Registration_Text_View"/>
-
-    <EditText
-        android:hint="ex) 달고나 라뗴"
-        style="@style/Registration_Edit_Box_Single"/>
-
-    <TextView
-        android:text="한줄 메뉴 소개"
-        android:layout_marginTop="20dp"
-        style="@style/Registration_Text_View"/>
-
-    <EditText
-        android:hint="ex) 맛있는 달고나와 라떼를 섞어 만들었습니다."
-        style="@style/Registration_Edit_Box_Single"/>
-
-    <TextView
         android:text="사진 등록(최대 5장)"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         style="@style/Registration_Text_View"/>
 
     <LinearLayout
@@ -50,21 +32,22 @@
     </LinearLayout>
 
     <TextView
-        android:text="요리 과정"
-        android:layout_marginTop="20dp"
+        android:text="글 작성"
+        android:layout_marginTop="28dp"
         style="@style/Registration_Text_View"/>
 
     <EditText
-        android:hint="예시) \n1. 달고나를 만들어서 잘게 부셔줍니다.\n2. 믹스커피로 커피를 타서 만들어줍니다.\n3. 잘게 부순 달고나를 커피 위에 올려줍니다."
-        style="@style/Registration_Edit_Box_Multi"/>
+        android:hint="이번에 만든 음식은 “”인데 아직 제대로 되지는 않았지만
+한번 시도해보면서 연습을 하였습니다."
+        style="@style/Registration_Edit_Box_Writing"/>
 
     <TextView
-        android:text="재료"
-        android:layout_marginTop="20dp"
+        android:text="해시태그"
+        android:layout_marginTop="12dp"
         style="@style/Registration_Text_View"/>
 
     <EditText
-        android:hint="재료를 띄어쓰기 없이 입력해주세요. ex) #양상추"
+        android:hint="태그를 띄어쓰기 없이 입력해주세요. ex) #메뉴개발중"
         style="@style/Registration_Edit_Box_Single"/>
 
     <HorizontalScrollView
@@ -80,24 +63,30 @@
 
             <TextView
                 style="@style/Hashtag_Value"
-                android:text="#양상추" />
+                android:text="#메뉴개발중" />
 
             <TextView
                 style="@style/Hashtag_Value"
-                android:text="#케첩" />
+                android:text="#한번드셔보셔유" />
 
             <TextView
                 style="@style/Hashtag_Value"
-                android:text="#튀긴감자" />
+                android:text="#대박" />
+
+            <TextView
+                style="@style/Hashtag_Value"
+                android:text="#달짝지근해유" />
+
 
         </LinearLayout>
 
     </HorizontalScrollView>
 
+
     <!-- java 코드로 button의 위치를 고정시켜주는 것이 좋다.-->
     <Button
         android:layout_marginTop="14dp"
-        android:text="등록 완료"
+        android:text="작성 완료"
         style="@style/Custom_Bottom_Button" />
 
 

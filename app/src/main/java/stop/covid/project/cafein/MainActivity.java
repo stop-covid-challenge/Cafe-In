@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -13,6 +14,7 @@ import stop.covid.project.cafein.main.Fragment_cafe;
 import stop.covid.project.cafein.main.Fragment_home;
 import stop.covid.project.cafein.main.Fragment_profile;
 import stop.covid.project.cafein.main.Fragment_subscribe;
+import stop.covid.project.cafein.main.comment.CommentAdapter;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -20,6 +22,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Fragment_cafe cafeFragment;
     private Fragment_profile profileFragment;
     private Fragment_subscribe subscribeFragment;
+
+    //댓글 리스트 및 어댑터 선언
+    private ListView commentList;
+    private CommentAdapter commentAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, homeFragment).commit();
         NavigationBarView nav = findViewById(R.id.tab_menu);
+
+        //댓글 어댑터 설정
+        commentList = (ListView) findViewById(R.id.comment_list);
+        commentAdapter = new CommentAdapter(MainActivity.this);
+        commentList.setAdapter(commentAdapter);
 
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener(){
             @Override
