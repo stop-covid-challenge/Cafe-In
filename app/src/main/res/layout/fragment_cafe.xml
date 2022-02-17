@@ -67,6 +67,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_popup_reminder" />
@@ -96,6 +97,7 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,8 +105,8 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="115dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/brown1"
             android:text="커피가 맛있는"
