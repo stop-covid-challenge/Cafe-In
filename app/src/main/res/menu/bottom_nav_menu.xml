@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@drawable/home"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/tab_cafe"
+        android:icon="@drawable/coffee_cup"
+        android:title="CAFE" />
+
+    <item
+        android:id="@+id/tab_subscribe"
+        android:icon="@drawable/file"
+        android:title="LIKE" />
+
+    <item
+        android:id="@+id/tab_profile"
+        android:icon="@drawable/user"
+        android:title="MY" />
+</menu>
