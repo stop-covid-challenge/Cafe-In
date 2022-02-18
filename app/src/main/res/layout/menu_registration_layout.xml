@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="메뉴 이름"
+        android:layout_marginTop="32dp"
+        style="@style/Registration_Text_View"/>
+
+    <EditText
+        android:hint="ex) 달고나 라뗴"
+        style="@style/Registration_Edit_Box_Single"/>
+
+    <TextView
+        android:text="한줄 메뉴 소개"
+        android:layout_marginTop="20dp"
+        style="@style/Registration_Text_View"/>
+
+    <EditText
+        android:hint="ex) 맛있는 달고나와 라떼를 섞어 만들었습니다."
+        style="@style/Registration_Edit_Box_Single"/>
+
+    <TextView
+        android:text="사진 등록(최대 5장)"
+        android:layout_marginTop="20dp"
+        style="@style/Registration_Text_View"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp">
+
+        <ImageButton
+            style="@style/Picture_Background_Values"/>
+
+        <ImageButton
+            style="@style/Picture_Background_Values"/>
+
+        <ImageButton
+            style="@style/Picture_Background_Values"/>
+
+        <ImageButton
+            style="@style/Picture_Background_Values"/>
+
+        <ImageButton
+            style="@style/Picture_Background_Values"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="요리 과정"
+        android:layout_marginTop="20dp"
+        style="@style/Registration_Text_View"/>
+
+    <EditText
+        android:hint="예시) \n1. 달고나를 만들어서 잘게 부셔줍니다.\n2. 믹스커피로 커피를 타서 만들어줍니다.\n3. 잘게 부순 달고나를 커피 위에 올려줍니다."
+        style="@style/Registration_Edit_Box_Multi"/>
+
+    <TextView
+        android:text="재료"
+        android:layout_marginTop="20dp"
+        style="@style/Registration_Text_View"/>
+
+    <EditText
+        android:hint="재료를 띄어쓰기 없이 입력해주세요. ex) #양상추"
+        style="@style/Registration_Edit_Box_Single"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Hashtag_Value"
+                android:text="#양상추" />
+
+            <TextView
+                style="@style/Hashtag_Value"
+                android:text="#케첩" />
+
+            <TextView
+                style="@style/Hashtag_Value"
+                android:text="#튀긴감자" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- java 코드로 button의 위치를 고정시켜주는 것이 좋다.-->
+    <Button
+        android:layout_marginTop="14dp"
+        android:text="등록 완료"
+        style="@style/Custom_Bottom_Button" />
+
+
+</LinearLayout>
