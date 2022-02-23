@@ -4,14 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/bg_fading_edge.xml" value="0.1" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/cafe_search_ic_size.xml" value="0.204" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/custom_bottom_button_design.xml" value="0.24" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/custom_circle_checkbox.xml" value="0.233" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/home_subscribe_picture.xml" value="0.24" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/indicator_active.xml" value="0.1" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/indicator_inactive.xml" value="0.1" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/picture_background.xml" value="0.1" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/picture_cafe_background.xml" value="0.239" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/picture_registration.xml" value="0.1" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/drawable/registration_background.xml" value="0.1" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/activity_comment.xml" value="0.23385416666666667" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/adapter_near_cafe.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/adapter_post.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/feed_registration_layout.xml" value="0.1" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/fragment_cafe.xml" value="0.2" />
@@ -19,7 +25,7 @@
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/fragment_post.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/fragment_subscribe.xml" value="0.264" />
-        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/like_comment_item.xml" value="0.15104166666666666" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/like_comment_item.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/like_comment_layout.xml" value="0.17239583333333333" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/login_registraion_layout.xml" value="0.15104166666666666" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/menu_registration_layout.xml" value="0.15104166666666666" />

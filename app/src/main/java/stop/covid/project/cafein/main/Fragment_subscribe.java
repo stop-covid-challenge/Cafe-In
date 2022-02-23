@@ -1,32 +1,21 @@
 package stop.covid.project.cafein.main;
 
 import android.graphics.drawable.BitmapDrawable;
-import android.media.Image;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.ArrayList;
 
-import stop.covid.project.cafein.MainActivity;
 import stop.covid.project.cafein.R;
-import stop.covid.project.cafein.main.subscribe.Fragment_comment;
 import stop.covid.project.cafein.main.subscribe.Post;
 import stop.covid.project.cafein.main.subscribe.PostAdapter;
-import stop.covid.project.cafein.main.subscribe.PostSliderAdapter;
 
 public class Fragment_subscribe extends Fragment {
 

@@ -2,15 +2,10 @@ package stop.covid.project.cafein;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
 
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -18,8 +13,7 @@ import stop.covid.project.cafein.main.Fragment_cafe;
 import stop.covid.project.cafein.main.Fragment_home;
 import stop.covid.project.cafein.main.Fragment_profile;
 import stop.covid.project.cafein.main.Fragment_subscribe;
-import stop.covid.project.cafein.main.comment.CommentAdapter;
-import stop.covid.project.cafein.main.subscribe.Fragment_comment;
+import stop.covid.project.cafein.main.subscribe.CommentActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -27,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Fragment_cafe cafeFragment;
     private Fragment_profile profileFragment;
     private Fragment_subscribe subscribeFragment;
-    private Fragment_comment commentFragment;
+    private CommentActivity commentFragment;
 
     /*댓글 리스트 및 어댑터 선언
     private ListView commentList;
@@ -42,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cafeFragment = new Fragment_cafe();
         profileFragment = new Fragment_profile();
         subscribeFragment = new Fragment_subscribe();
-        commentFragment = new Fragment_comment();
+        commentFragment = new CommentActivity();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, homeFragment).commit();
         NavigationBarView nav = findViewById(R.id.tab_menu);

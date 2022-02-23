@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,22 +19,26 @@ import java.util.ArrayList;
 import stop.covid.project.cafein.R;
 import stop.covid.project.cafein.main.dto.Comment;
 
-public class Fragment_comment extends Fragment {
+public class CommentActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private CommentAdapter adapter;
+    private ImageButton btn_comment_back;
 
-    public static Fragment_comment newInstance(){
-        return new Fragment_comment();
-    }
-
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.subscribe_comment, container, false);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_comment);
 
-        recyclerView = rootView.findViewById(R.id.recycler_comment);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext(), RecyclerView.VERTICAL, false));
+        btn_comment_back = findViewById(R.id.btn_comment_back);
+        btn_comment_back.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        recyclerView = findViewById(R.id.recycler_comment);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
         //리사이클러뷰 테스트 데이터
         ArrayList<Comment> list = new ArrayList<>();
@@ -42,13 +48,12 @@ public class Fragment_comment extends Fragment {
         list.add(new Comment(4, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연4", "배고파요", "1시간 전", 10));
         list.add(new Comment(5, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연5", "배고파요", "12분 전", 3));
         list.add(new Comment(6, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연6", "배고파요", "12분 전", 3));
-        list.add(new Comment(7, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연7", "자고싶다", "12분 전", 3));
-        list.add(new Comment(8, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연8", "자고싶다", "12분 전", 3));
+        list.add(new Comment(7, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연7", "맛있겠네요", "12분 전", 3));
+        list.add(new Comment(8, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연8", "맛있겠네요", "12분 전", 3));
 
         adapter = new CommentAdapter();
         adapter.setCommentList(list);
         recyclerView.setAdapter(adapter);
-
-        return rootView;
     }
+
 }

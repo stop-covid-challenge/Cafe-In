@@ -1,6 +1,7 @@
 package stop.covid.project.cafein.main.subscribe;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.ArrayList;
@@ -91,7 +91,7 @@ public class PostAdapter extends BaseAdapter {
             btn_like.setImageResource(R.drawable.heart_fill);
 
         //뷰페이저 구현 자리
-        sliderViewPager.setOffscreenPageLimit(1);
+        sliderViewPager.setOffscreenPageLimit(4);
         sliderViewPager.setAdapter(new PostSliderAdapter(context, postList.get(pos).getImgList()));
         sliderViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback(){
             @Override
@@ -123,7 +123,7 @@ public class PostAdapter extends BaseAdapter {
         btn_comment.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                changeCommentFragment();
+                changeCommentActivity();
             }
         });
 
@@ -131,15 +131,15 @@ public class PostAdapter extends BaseAdapter {
         btn_comment_send.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.d("TEST", "PostAdapter 온클릭");
                 Toast.makeText(context, et_comment.getText().toString(), Toast.LENGTH_SHORT).show();
-                changeCommentFragment();
+                changeCommentActivity();
             }
         });
+
         return convertView; //생성한 뷰 반환
     }
 
-    //뷰페이저 처리 관련 함수들
+    //뷰페이저indicator 처리 관련 함수들
     private void setupIndicators(int count){
         indicator.removeAllViews();
         ImageView[] indicators = new ImageView[count];
@@ -157,6 +157,7 @@ public class PostAdapter extends BaseAdapter {
 
     private void setCurrentIndicator(int position){
         int childCount = indicator.getChildCount();
+        System.out.println("indicator 활성화 위치: " + position);
         System.out.println("childCount: " + childCount);
         for(int k = 0; k < childCount; k++){
             ImageView iv = (ImageView) indicator.getChildAt(k);
@@ -167,9 +168,15 @@ public class PostAdapter extends BaseAdapter {
         }
     }
 
-    //보내기 버튼 누를때 다음 프래그먼트로 전환
-    public void changeCommentFragment(){
-        ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, new Fragment_comment()).commit();
-        //((MainActivity)context).getFragmentManager();
+    //댓글액티비티로 변경
+    public void changeCommentActivity(){
+        Intent intent = new Intent(context, CommentActivity.class);
+        context.startActivity(intent);
     }
+
+    /* 프래그먼트 교체
+    public void changeCommentFragment(){
+        ((MainActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, new CommentActivity()).commit();
+        //((MainActivity)context).getFragmentManager();
+    } */
 }

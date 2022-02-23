@@ -1,21 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/tab_menu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <TextView
+            android:id="@+id/tv_title_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Enjoy Your"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:shadowColor="#000000"
+            android:text="House"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_1" />
+
+        <TextView
+            android:id="@+id/tv_title_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Coffee"
+            android:textStyle="bold"
+            android:textColor="#deb887"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_title_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_1" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notification" />
+
+        <EditText
+            android:id="@+id/et_cafe_search"
+            android:layout_width="364dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:hint="   Morning Coffee"
+            android:drawableLeft="@drawable/cafe_search_ic_size"
+            android:drawablePadding="5dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_3" />
+
+        <LinearLayout
+            android:id="@+id/linear_cafe_keyword"
+            android:layout_width="364dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_cafe_search">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_bottom_button_design"
+                android:text="커피가 맛있는"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/brown1" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:text="브런치로 유명한"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/custom_bottom_button_design" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="케이크가 다양한"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/custom_bottom_button_design"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal"
+            android:weightSum="16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_cafe_keyword">
+
+            <TextView
+                style="@style/Bold_Title"
+                android:layout_weight="15"
+                android:text="근처 카페" />
+
+            <Button
+                android:id="@+id/btn_near_cafe_more"
+                style="@style/Bold_Add_Button"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_near_cafe"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_near_cafe">
+
+            <TextView
+                style="@style/Bold_Title"
+                android:layout_weight="15"
+                android:text="추천 제품" />
+
+            <Button
+                android:id="@+id/btn_near_cafe_more"
+                style="@style/Bold_Add_Button"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"></LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+<!--
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/tv_title_1"
@@ -26,6 +258,7 @@
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif"
         android:text="Enjoy Your"
+        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +272,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
+        android:textStyle="bold"
         android:shadowColor="#000000"
         android:text="House"
         android:textColor="#000000"
@@ -55,6 +289,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
         android:text="Coffee"
+        android:textStyle="bold"
         android:textColor="#deb887"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/tv_title_2"
@@ -62,15 +297,16 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_popup_reminder" />
+        app:srcCompat="@drawable/notification" />
 
     <EditText
         android:id="@+id/et_cafe_search"
@@ -81,6 +317,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:hint="   Morning Coffee"
+        android:drawableLeft="@drawable/cafe_search_ic_size"
+        android:drawablePadding="5dp"
         android:background="@drawable/border"
         android:ems="10"
         android:inputType="textPersonName"
@@ -89,7 +328,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title_3" />
 
     <LinearLayout
-        android:id="@+id/search"
+        android:id="@+id/linear_cafe_keyword"
         android:layout_width="364dp"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
@@ -106,22 +345,29 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="16dp"
             android:layout_weight="1"
-            android:background="@color/brown1"
+            android:background="@drawable/custom_bottom_button_design"
             android:text="커피가 맛있는"
-            android:textSize="10sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:backgroundTint="@color/brown1" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:text="브런치로 유명한"
-            android:textSize="10sp"
-            app:backgroundTint="@color/brown1"
-            app:rippleColor="@color/brown1" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/custom_bottom_button_design" />
 
         <Button
             android:id="@+id/button3"
@@ -129,21 +375,103 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="케이크가 다양한"
-            app:backgroundTint="@color/brown1" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/custom_bottom_button_design"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif"
-        android:text="근처 카페"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        app:layout_constraintTop_toBottomOf="@+id/linear_cafe_keyword">
+
+        <TextView
+            style="@style/Bold_Title"
+            android:layout_weight="15"
+            android:text="근처 카페" />
+
+        <Button
+            android:id="@+id/btn_near_cafe_more"
+            style="@style/Bold_Add_Button"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_near_cafe"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_near_cafe">
+
+        <TextView
+            style="@style/Bold_Title"
+            android:layout_weight="15"
+            android:text="추천 제품" />
+
+        <Button
+            android:id="@+id/btn_near_cafe_more"
+            style="@style/Bold_Add_Button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+-->
