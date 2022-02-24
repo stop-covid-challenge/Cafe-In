@@ -32,11 +32,12 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CommentViewHolder holder, int position) {
+        /*
         holder.img_user_profile.setImageDrawable(list.get(position).getProfile());
         holder.tv_comment_user_nickname.setText(list.get(position).getNickname());
         holder.tv_user_comment.setText(list.get(position).getComment());
         holder.tv_comment_time.setText(list.get(position).getTime());
-        holder.tv_comment_like_num.setText("좋아요 " + list.get(position).getLikeNum() + "개");
+        holder.tv_comment_like_num.setText("좋아요 " + list.get(position).getLikeNum() + "개");*/
     }
 
 

@@ -42,14 +42,14 @@ public class CommentActivity extends AppCompatActivity {
 
         //리사이클러뷰 테스트 데이터
         ArrayList<Comment> list = new ArrayList<>();
-        list.add(new Comment(1, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연", "헐 너무 맛있어요", "30분 전", 3));
-        list.add(new Comment(2, new BitmapDrawable(getResources(), String.valueOf(R.drawable.coffee_cup)), "나연2", "해먹어 봐야겠네요", "10분 전", 3));
-        list.add(new Comment(3, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연3", "배고파요", "12분 전", 3));
-        list.add(new Comment(4, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연4", "배고파요", "1시간 전", 10));
-        list.add(new Comment(5, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연5", "배고파요", "12분 전", 3));
-        list.add(new Comment(6, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연6", "배고파요", "12분 전", 3));
-        list.add(new Comment(7, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연7", "맛있겠네요", "12분 전", 3));
-        list.add(new Comment(8, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연8", "맛있겠네요", "12분 전", 3));
+//        list.add(new Comment(1, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연", "헐 너무 맛있어요", "30분 전", 3));
+//        list.add(new Comment(2, new BitmapDrawable(getResources(), String.valueOf(R.drawable.coffee_cup)), "나연2", "해먹어 봐야겠네요", "10분 전", 3));
+//        list.add(new Comment(3, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연3", "배고파요", "12분 전", 3));
+//        list.add(new Comment(4, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연4", "배고파요", "1시간 전", 10));
+//        list.add(new Comment(5, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연5", "배고파요", "12분 전", 3));
+//        list.add(new Comment(6, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연6", "배고파요", "12분 전", 3));
+//        list.add(new Comment(7, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연7", "맛있겠네요", "12분 전", 3));
+//        list.add(new Comment(8, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "나연8", "맛있겠네요", "12분 전", 3));
 
         adapter = new CommentAdapter();
         adapter.setCommentList(list);
