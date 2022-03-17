@@ -45,7 +45,7 @@ public class Fragment_subscribe extends Fragment {
         postList.add(new Post(4, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "백종원4", imgList, false, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user))));
         postList.add(new Post(5, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user)), "백종원5", imgList, false, new BitmapDrawable(getResources(), String.valueOf(R.drawable.user))));
 
-        postAdapter = new PostAdapter(rootView.getContext(), R.layout.adapter_post, postList);
+        postAdapter = new PostAdapter(rootView.getContext(), R.layout.item_post, postList);
         listView = rootView.findViewById(R.id.lv_post);
         listView.setAdapter(postAdapter);
 

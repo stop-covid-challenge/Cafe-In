@@ -18,6 +18,7 @@
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/activity_login.xml" value="0.16" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/activity_login_registraion.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/adapter_comment.xml" value="0.20833333333333334" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/adapter_near_cafe.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/adapter_post.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/feed_registration_layout.xml" value="0.1" />
@@ -26,6 +27,8 @@
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/fragment_post.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/fragment_subscribe.xml" value="0.264" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/item_home_popular.xml" value="0.264" />
+        <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/item_near_cafe.xml" value="0.15416666666666667" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/like_comment_item.xml" value="0.264" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/like_comment_layout.xml" value="0.17239583333333333" />
         <entry key="..\:/work/mobileApp/CafeIn/app/src/main/res/layout/login_registraion_layout.xml" value="0.15104166666666666" />

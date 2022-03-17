@@ -109,6 +109,7 @@
             style="@style/Registration_Text_View"/>
 
         <EditText
+            android:id="@+id/et_address"
             android:hint="ex) 서울시 광진구"
             style="@style/Registration_Edit_Box_Single"/>
 
@@ -118,6 +119,7 @@
             style="@style/Registration_Text_View"/>
 
         <EditText
+            android:id="@+id/et_detail_address"
             android:hint="ex) 건대입구역 2출 엔젤리너스"
             style="@style/Registration_Edit_Box_Single"/>
         </LinearLayout>

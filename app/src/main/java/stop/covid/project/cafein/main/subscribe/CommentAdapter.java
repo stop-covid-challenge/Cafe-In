@@ -25,7 +25,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentViewHolder> {
     public CommentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.adapter_comment, parent, false);
+        View view = inflater.inflate(R.layout.item_comment, parent, false);
         CommentViewHolder viewHolder = new CommentViewHolder(context, view);
         return viewHolder;
     }
