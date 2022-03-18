@@ -3,14 +3,23 @@
     package="stop.covid.project.cafein">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".SocketApplication"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CafeIn">
-        <activity android:name=".MainActivity"
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".main.subscribe.CommentActivity"></activity>
+        <activity android:name=".LoginRegisterActivity"></activity>
+
+        <activity android:name=".LoginActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +27,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.subscribe.CommentActivity"></activity>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="17deca5970e30fd0ca881f35decef418"/>
+
     </application>
 
 </manifest>
