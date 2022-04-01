@@ -24,20 +24,24 @@ import java.io.InputStream;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import stop.covid.project.cafein.main.api.ApiClient;
 import stop.covid.project.cafein.main.api.RetrofitService;
 import stop.covid.project.cafein.main.dto.User;
 
 public class LoginRegisterActivity extends AppCompatActivity {
 
-    RetrofitService retrofitService;
+    private final String TAG = getClass().getSimpleName();
+    private static final int REQUEST_CODE = 0;  //사진 업로드 요청코드
+    private static final String BASE_URL = "http://3.36.52.170:8080/";
+    private RetrofitService retrofitService;
+
     RadioGroup radioGroup;
     LinearLayout radioChecked;
     EditText name, introduce, address, detail_address;
     ImageButton ib_mainProfile, ib_backProfile;
     Button btn_setting_finish;
-
-    private static final int REQUEST_CODE = 0;  //사진 업로드 요청코드
 
     //로그인 정보 받아와서
     @Override
@@ -106,7 +110,27 @@ public class LoginRegisterActivity extends AppCompatActivity {
                User user = new User(
                        socialId, name.getText().toString(), socialId, introduce.getText().toString(),
                        testImage, testImage, address.getText().toString() + detail_address.getText().toString());
-               sendUser(user);
+
+               initAPI(BASE_URL);
+               Call<User> postCall = retrofitService.registerUser(user);
+               postCall.enqueue(new Callback<User>() {
+                   @Override
+                   public void onResponse(Call<User> call, Response<User> response) {
+                       if(response.isSuccessful())
+                           Log.d(TAG, "user 등록 완료");
+                       else {
+                           Log.d(TAG, "status code: " + response.code());
+                           Log.d(TAG,response.errorBody().toString());
+                           Log.d(TAG,call.request().body().toString());
+                       }
+                   }
+
+                   @Override
+                   public void onFailure(Call<User> call, Throwable t) {
+                       Log.d(TAG, "fail msg: " + t.getMessage());
+                   }
+               });
+
                startActivity(intent);
            }
        });
@@ -131,7 +155,18 @@ public class LoginRegisterActivity extends AppCompatActivity {
         }
     }
 
-    //유저 정보 서버로 보내기
+    //레트로핏 설정
+    private void initAPI(String baseUrl){
+        Log.d(TAG, "initAPI: " + baseUrl);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        retrofitService = retrofit.create(RetrofitService.class);
+    }
+
+    /*레트로핏 이용해서 유저 정보 서버로 보내기
     private void sendUser(User user){
         retrofitService = ApiClient.getApiClient().create(RetrofitService.class);
         Call<User> call = retrofitService.setUserBody(user);
@@ -157,4 +192,5 @@ public class LoginRegisterActivity extends AppCompatActivity {
             }
         });
     }
+    */
 }

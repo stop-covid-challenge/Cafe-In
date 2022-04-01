@@ -13,7 +13,7 @@ public class User {
     private String email;
     private String introduce;
     private String profileImage;
-    private String backProfileImage;
+    private String backgroundImage;
     private String address;
 
     @NonNull
@@ -25,7 +25,7 @@ public class User {
                 "email: " + email +
                 "introduce: " + introduce +
                 "profileImage: " + profileImage +
-                "backImage: " + backProfileImage +
+                "backgroundImage: " + backgroundImage +
                 "address: " + address +
                 "}";
     }
@@ -39,7 +39,7 @@ public class User {
         this.email = email;
         this.introduce = introduce;
         this.profileImage = profileImage;
-        this.backProfileImage = backProfileImage;
+        this.backgroundImage = backgroundImage;
         this.address = address;
     }
 
@@ -50,7 +50,7 @@ public class User {
         this.email = email;
         this.introduce = introduce;
         this.profileImage = profileImage;
-        this.backProfileImage = backProfileImage;
+        this.backgroundImage = backProfileImage;
     }
 
     public String getSocialId() {
@@ -93,12 +93,12 @@ public class User {
         this.profileImage = profileImage;
     }
 
-    public String getBackProfileImage() {
-        return backProfileImage;
+    public String getBackgroundImage() {
+        return backgroundImage;
     }
 
-    public void setBackProfileImage(String backProfileImage) {
-        this.backProfileImage = backProfileImage;
+    public void setBackgroundImage(String backProfileImage) {
+        this.backgroundImage = backProfileImage;
     }
 
     public String getAddress() {
